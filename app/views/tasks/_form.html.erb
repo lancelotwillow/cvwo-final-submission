@@ -1,0 +1,8 @@
+<%= simple_form_for @task do |t|%>
+	<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a category") %>
+	<%= t.input :title, label: "Task Title"  %>
+	<%= t.input :description  %>
+	<%= t.input :deadline  %>
+	<%= t.button :submit%>
+
+<% end %>
